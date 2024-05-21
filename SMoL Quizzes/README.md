@@ -10,17 +10,14 @@ explains the differences.</p>
 
 
 ## Інструмент
-<p>The files in <a href="./Instrument/">./Instrument</a> are PDF version
-of the instruments.</p>
-<p>The real instruments are online survey powered by the Qualtrics
-system, where</p>
-<ul>
-<li>Students do not see question names (e.g.,
-<code>arithmetic operators</code>), and</li>
-<li>The survey randomize the order of questions (<a
-href="./Instrument/Question%20Order.html">./Instrument/Question
-Order.html</a> explain how we randomized)</li>
-</ul>
+
+Файли у папці <a href="./Instrument/">./Instrument</a> це PDF версії інстументів.
+
+Справжні інструменти це онлайн опитування працюючуї на системі, де
+- Студенти не бачать назви питань (наприклад, `аріфметичні оператори`), та
+- опитування рандомізує послідовність питань ([Question
+Order](./Instrument/Question%20Order) описує як ми рандомізуєм
+
 
 ## Refutation Text
 <p>The files in <a href="./Refutation%20Text">./Refutation Text</a> are
