@@ -32,9 +32,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::warmup_error
-</h2>
+
+## scope1::warmup_error
+
 <table>
 <tr>
 <th>
@@ -62,9 +62,9 @@ print(abc)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::warmup_fun
-</h2>
+
+## scope1::warmup_fun
+
 <table>
 <tr>
 <th>
@@ -96,9 +96,9 @@ print(sum(2, 1, 3))</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::local_def_is_possible
-</h2>
+
+## scope1::local_def_is_possible
+
 <table>
 <tr>
 <th>
@@ -133,9 +133,9 @@ print(addy(2))</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::refer_global_is_possible
-</h2>
+
+## scope1::refer_global_is_possible
+
 <table>
 <tr>
 <th>
@@ -170,9 +170,9 @@ print(addy(2))</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::defs_are_recursive
-</h2>
+
+## scope1::defs_are_recursive
+
 <table>
 <tr>
 <th>
@@ -207,9 +207,9 @@ print(addy(2))</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::shadow_or_overwrite
-</h2>
+
+## scope1::shadow_or_overwrite
+
 <table>
 <tr>
 <th>
@@ -247,9 +247,9 @@ print(addy(2))</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::shadow_rather_than_overwrite
-</h2>
+
+## scope1::shadow_rather_than_overwrite
+
 <table>
 <tr>
 <th>
@@ -287,9 +287,9 @@ print(addy(2) + y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::error_when_refer_to_undefined
-</h2>
+
+## scope1::error_when_refer_to_undefined
+
 <table>
 <tr>
 <th>
@@ -324,9 +324,9 @@ print(addy(2) + y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::what_is_x_1
-</h2>
+
+## scope1::what_is_x_1
+
 <table>
 <tr>
 <th>
@@ -371,9 +371,9 @@ print(main())</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::what_is_x_2
-</h2>
+
+## scope1::what_is_x_2
+
 <table>
 <tr>
 <th>
@@ -418,9 +418,9 @@ print(main())</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::what_is_x_3
-</h2>
+
+## scope1::what_is_x_3
+
 <table>
 <tr>
 <th>
@@ -465,9 +465,9 @@ print(main())</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::what_is_x_4
-</h2>
+
+## scope1::what_is_x_4
+
 <table>
 <tr>
 <th>
@@ -512,9 +512,9 @@ print(main())</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::define_twice_global
-</h2>
+
+## scope1::define_twice_global
+
 <table>
 <tr>
 <th>
@@ -545,9 +545,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope1::define_twice_arg
-</h2>
+
+## scope1::define_twice_arg
+
 <table>
 <tr>
 <th>
@@ -579,9 +579,9 @@ print(f(1, 2))</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope2::warmup_error
-</h2>
+
+## scope2::warmup_error
+
 <table>
 <tr>
 <th>
@@ -606,9 +606,9 @@ Python
 </td>
 </tr>
 </table>
-<h2>
-scope2::defvar_binding_cause_evaluation
-</h2>
+
+## scope2::defvar_binding_cause_evaluation
+
 <table>
 <tr>
 <th>
@@ -636,9 +636,9 @@ print(42)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope2::funcall_binding_cause_evaluation
-</h2>
+
+## scope2::funcall_binding_cause_evaluation
+
 <table>
 <tr>
 <th>
@@ -670,9 +670,9 @@ print(f(1 / 0))</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope2::good_order
-</h2>
+
+## scope2::good_order
+
 <table>
 <tr>
 <th>
@@ -706,9 +706,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope2::bad_order
-</h2>
+
+## scope2::bad_order
+
 <table>
 <tr>
 <th>
@@ -742,9 +742,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope2::order_and_funcall_warmup
-</h2>
+
+## scope2::order_and_funcall_warmup
+
 <table>
 <tr>
 <th>
@@ -782,9 +782,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope2::order_and_funcall_1
-</h2>
+
+## scope2::order_and_funcall_1
+
 <table>
 <tr>
 <th>
@@ -822,9 +822,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-scope2::order_and_funcall_2
-</h2>
+
+## scope2::order_and_funcall_2
+
 <table>
 <tr>
 <th>
@@ -873,9 +873,9 @@ print(main())</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars1::scope_review_1
-</h2>
+
+## mut-vars1::scope_review_1
+
 <table>
 <tr>
 <th>
@@ -912,9 +912,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars1::scope_review_2
-</h2>
+
+## mut-vars1::scope_review_2
+
 <table>
 <tr>
 <th>
@@ -949,9 +949,9 @@ print(foo())</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars1::scope_review_3
-</h2>
+
+## mut-vars1::scope_review_3
+
 <table>
 <tr>
 <th>
@@ -992,9 +992,9 @@ print(gety())</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::warmup_setbang
-</h2>
+
+## mut-vars2::warmup_setbang
+
 <table>
 <tr>
 <th>
@@ -1025,9 +1025,9 @@ print(rent)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::update_undefined
-</h2>
+
+## mut-vars2::update_undefined
+
 <table>
 <tr>
 <th>
@@ -1055,9 +1055,9 @@ print(foobar)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::not_aliased_by_defvar_1
-</h2>
+
+## mut-vars2::not_aliased_by_defvar_1
+
 <table>
 <tr>
 <th>
@@ -1094,9 +1094,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::not_aliased_by_defvar_2
-</h2>
+
+## mut-vars2::not_aliased_by_defvar_2
+
 <table>
 <tr>
 <th>
@@ -1133,9 +1133,9 @@ print(n)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::not_aliased_by_defvar_3
-</h2>
+
+## mut-vars2::not_aliased_by_defvar_3
+
 <table>
 <tr>
 <th>
@@ -1172,9 +1172,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::remote_update_possible
-</h2>
+
+## mut-vars2::remote_update_possible
+
 <table>
 <tr>
 <th>
@@ -1213,9 +1213,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::not_aliased_by_funarg_1
-</h2>
+
+## mut-vars2::not_aliased_by_funarg_1
+
 <table>
 <tr>
 <th>
@@ -1253,9 +1253,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::funs_remember_vars_not_vals
-</h2>
+
+## mut-vars2::funs_remember_vars_not_vals
+
 <table>
 <tr>
 <th>
@@ -1304,9 +1304,9 @@ print(getx())</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::not_aliased_by_funarg_2
-</h2>
+
+## mut-vars2::not_aliased_by_funarg_2
+
 <table>
 <tr>
 <th>
@@ -1344,9 +1344,9 @@ print(set_and_return(x))</pre>
 </td>
 </tr>
 </table>
-<h2>
-mut-vars2::not_aliased_by_funarg_3
-</h2>
+
+## mut-vars2::not_aliased_by_funarg_3
+
 <table>
 <tr>
 <th>
@@ -1388,9 +1388,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors1::warmup_mvec
-</h2>
+
+## vectors1::warmup_mvec
+
 <table>
 <tr>
 <th>
@@ -1425,9 +1425,9 @@ print([n, f(n)])</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors1::vec_hetero
-</h2>
+
+## vectors1::vec_hetero
+
 <table>
 <tr>
 <th>
@@ -1452,9 +1452,9 @@ Python
 </td>
 </tr>
 </table>
-<h2>
-vectors1::vec_print
-</h2>
+
+## vectors1::vec_print
+
 <table>
 <tr>
 <th>
@@ -1479,9 +1479,9 @@ Python
 </td>
 </tr>
 </table>
-<h2>
-vectors1::warmup_veclen
-</h2>
+
+## vectors1::warmup_veclen
+
 <table>
 <tr>
 <th>
@@ -1509,9 +1509,9 @@ print(len(v))</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors1::veclen_nested
-</h2>
+
+## vectors1::veclen_nested
+
 <table>
 <tr>
 <th>
@@ -1536,9 +1536,9 @@ Python
 </td>
 </tr>
 </table>
-<h2>
-vectors1::warmup_vecref
-</h2>
+
+## vectors1::warmup_vecref
+
 <table>
 <tr>
 <th>
@@ -1566,9 +1566,9 @@ print(v[1][0])</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors1::warmup_vecset_1
-</h2>
+
+## vectors1::warmup_vecset_1
+
 <table>
 <tr>
 <th>
@@ -1599,9 +1599,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors1::warmup_vecset_2
-</h2>
+
+## vectors1::warmup_vecset_2
+
 <table>
 <tr>
 <th>
@@ -1632,9 +1632,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors1::mpairs_are_mvec
-</h2>
+
+## vectors1::mpairs_are_mvec
+
 <table>
 <tr>
 <th>
@@ -1662,9 +1662,9 @@ print(mv[0])</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors1::vector_not_flatten
-</h2>
+
+## vectors1::vector_not_flatten
+
 <table>
 <tr>
 <th>
@@ -1695,9 +1695,9 @@ print(m[2])</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::alias_with_defvar
-</h2>
+
+## vectors2::alias_with_defvar
+
 <table>
 <tr>
 <th>
@@ -1731,9 +1731,9 @@ print(y)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::alias_with_funcall
-</h2>
+
+## vectors2::alias_with_funcall
+
 <table>
 <tr>
 <th>
@@ -1771,9 +1771,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::alias_var_in_mvec
-</h2>
+
+## vectors2::alias_var_in_mvec
+
 <table>
 <tr>
 <th>
@@ -1807,9 +1807,9 @@ print(v)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::alias_mvec_in_mvec
-</h2>
+
+## vectors2::alias_mvec_in_mvec
+
 <table>
 <tr>
 <th>
@@ -1843,9 +1843,9 @@ print(v)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::alias_mvec_in_mvec_trick
-</h2>
+
+## vectors2::alias_mvec_in_mvec_trick
+
 <table>
 <tr>
 <th>
@@ -1879,9 +1879,9 @@ print(v)</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::alias_mvec_in_mpair
-</h2>
+
+## vectors2::alias_mvec_in_mpair
+
 <table>
 <tr>
 <th>
@@ -1915,9 +1915,9 @@ print(vv[0])</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::warmup_circularity
-</h2>
+
+## vectors2::warmup_circularity
+
 <table>
 <tr>
 <th>
@@ -1948,9 +1948,9 @@ print(len(x))</pre>
 </td>
 </tr>
 </table>
-<h2>
-vectors2::circularity_and_alias
-</h2>
+
+## vectors2::circularity_and_alias
+
 <table>
 <tr>
 <th>
@@ -1984,9 +1984,9 @@ print(((v[0])[0])[1])</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::smol_quiz_var_as_arg
-</h2>
+
+## lambda1::smol_quiz_var_as_arg
+
 <table>
 <tr>
 <th>
@@ -2024,9 +2024,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::smol_quiz_seemingly_alias_a_var
-</h2>
+
+## lambda1::smol_quiz_seemingly_alias_a_var
+
 <table>
 <tr>
 <th>
@@ -2078,9 +2078,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::smol_quiz_aliasing_mvec_in_mvec
-</h2>
+
+## lambda1::smol_quiz_aliasing_mvec_in_mvec
+
 <table>
 <tr>
 <th>
@@ -2114,9 +2114,9 @@ print(pr)</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::smol_quiz_circularity
-</h2>
+
+## lambda1::smol_quiz_circularity
+
 <table>
 <tr>
 <th>
@@ -2150,9 +2150,9 @@ print(x)</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::warmup_hof
-</h2>
+
+## lambda1::warmup_hof
+
 <table>
 <tr>
 <th>
@@ -2189,9 +2189,9 @@ print(g())</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::fun_as_parameter
-</h2>
+
+## lambda1::fun_as_parameter
+
 <table>
 <tr>
 <th>
@@ -2230,9 +2230,9 @@ print(twice(double, 1))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::fun_as_output
-</h2>
+
+## lambda1::fun_as_output
+
 <table>
 <tr>
 <th>
@@ -2272,9 +2272,9 @@ print(f(100))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda1::fun_in_vectors
-</h2>
+
+## lambda1::fun_in_vectors
+
 <table>
 <tr>
 <th>
@@ -2309,9 +2309,9 @@ print(v[0](2))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda2::read_local1
-</h2>
+
+## lambda2::read_local1
+
 <table>
 <tr>
 <th>
@@ -2355,9 +2355,9 @@ print(get_x())</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda2::read_local2
-</h2>
+
+## lambda2::read_local2
+
 <table>
 <tr>
 <th>
@@ -2404,9 +2404,9 @@ print(get_b())</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda2::fun_ref_env
-</h2>
+
+## lambda2::fun_ref_env
+
 <table>
 <tr>
 <th>
@@ -2454,9 +2454,9 @@ print(g(2))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda2::state
-</h2>
+
+## lambda2::state
+
 <table>
 <tr>
 <th>
@@ -2504,9 +2504,9 @@ print(f(x))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda2::counter
-</h2>
+
+## lambda2::counter
+
 <table>
 <tr>
 <th>
@@ -2562,9 +2562,9 @@ print(g())</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda2::syntax_pitfall
-</h2>
+
+## lambda2::syntax_pitfall
+
 <table>
 <tr>
 <th>
@@ -2599,9 +2599,9 @@ print(f(5, 10))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda3::curry_lambda
-</h2>
+
+## lambda3::curry_lambda
+
 <table>
 <tr>
 <th>
@@ -2638,9 +2638,9 @@ print(f(2)(1))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda3::lambda_remembers_env
-</h2>
+
+## lambda3::lambda_remembers_env
+
 <table>
 <tr>
 <th>
@@ -2678,9 +2678,9 @@ print(f(x))</pre>
 </td>
 </tr>
 </table>
-<h2>
-lambda3::counter_lambda
-</h2>
+
+## lambda3::counter_lambda
+
 <table>
 <tr>
 <th>
