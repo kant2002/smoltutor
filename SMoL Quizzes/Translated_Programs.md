@@ -1,4 +1,5 @@
-<h1 id="quiz-1">Quiz 1</h1>
+# Quiz 1
+
 <h2>
 arithmetic operators
 </h2>

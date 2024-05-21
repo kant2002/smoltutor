@@ -1,0 +1,3 @@
+- [Quiz 1.pdf](Quiz%201.pdf)
+- [Quiz 2.pdf](Quiz%202.pdf)
+- [Quiz 3.pdf](Quiz%203.pdf)
