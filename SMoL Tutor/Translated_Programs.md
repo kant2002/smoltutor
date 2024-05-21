@@ -1,6 +1,4 @@
-<h2>
-scope1::warmup_defvar
-</h2>
+## scope1::warmup_defvar
 <table>
 <tr>
 <th>

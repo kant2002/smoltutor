@@ -1,8 +1,8 @@
 # README
 
-We provide a local build of the Tutor.
+Ми надаємо локальний білд Репетитора.
 
-To see a tutorial in action, click one of the following links (no Internet connection required):
+Щоб подивитися підручник у дії, натисніть на одне із наступних посилань ~~(підлючення до інтернет не потрібно)~~:
 
 <ul>
 <li><a href="./dist/index.html?tutorial=scope">scope (Частина 1)</a></li>
@@ -21,11 +21,8 @@ To see a tutorial in action, click one of the following links (no Internet conne
 
 ## Results
 
-[Tutor Results](./Tutor%20Results.md) presents
-summative statistics of the results: how many (in percentages) students
-made each choice. Wrong choices are labeled with misinterpreters.</p>
+[Tutor Results](./Tutor%20Results) представляє підсумкову статистику результатів: скільки (у відсотках) учнів зробило кожен вибір. Неправильний вибір позначається із неправильними інтерпретаціями.
 
 ## JavaScript and Python Translation of the Programs
 
-<p><a
-href="./Translated_Programs.html">./Translated_Programs.html</a></p>
+[Translated Programs](./Translated_Programs)
