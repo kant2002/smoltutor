@@ -1,4 +1,5 @@
-<h1 id="language-differences">Language Differences</h1>
+# Language Differences
+
 <p>This file explains the differences between <strong>the SMoL
 implementation</strong> (which is also the SMoL used in SMoL Quizzes)
 and the language as presented in the paper (hereafter, <em>the Paper

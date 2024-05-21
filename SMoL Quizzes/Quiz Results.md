@@ -1,4 +1,5 @@
-<h2 id="quiz-1">Quiz 1</h2>
+## Quiz 1
+
 <h3 id="arithmetic-operators">arithmetic operators</h3>
 <pre><code>(deffun (f o) (o 1 1))
 (f +)</code></pre>

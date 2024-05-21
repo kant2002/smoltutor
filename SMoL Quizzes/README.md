@@ -4,8 +4,7 @@
 
 <p>As explained in the paper, the SMoL implementation that was used in
 SMoL Quizzes (and Quizius) is slightly different from the SMoL language
-as specified in the paper. <a
-href="./Language%20Differences.html">./Language Differences.html</a>
+as specified in the paper. [Language Differences](Language%20Differences.html)
 explains the differences.</p>
 
 
@@ -16,18 +15,20 @@ explains the differences.</p>
 Справжні інструменти це онлайн опитування працюючуї на системі, де
 - Студенти не бачать назви питань (наприклад, `аріфметичні оператори`), та
 - опитування рандомізує послідовність питань ([Question
-Order](./Instrument/Question%20Order) описує як ми рандомізуєм
+Order](./Instrument/Question%20Order) описує як ми рандомізуєм)
 
 
 ## Refutation Text
-<p>The files in <a href="./Refutation%20Text">./Refutation Text</a> are
-refutation texts.</p>
 
-## Results
+The files in [Refutation Text](./Refutation%20Text) are
+refutation texts.
 
-<p><a href="./Quiz%20Results.html">./Quiz Results.html</a> presents
+## Результати
+
+[Quiz Results](./Quiz%20Results) presents
 summative statistics of the results: how many (in percentages) students
 made each choice. Wrong choices are labeled with misinterpreters.</p>
+
 ## JavaScript and Python Translation of the Programs
-<p><a
-href="./Translated_Programs.html">./Translated_Programs.html</a></p>
+
+[Translated Programs](./Translated_Programs)
