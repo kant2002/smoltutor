@@ -1,4 +1,5 @@
-<h2 id="scope1warmup_defvar">1. scope1::warmup_defvar</h2>
+## 1. scope1::warmup_defvar
+
 <pre><code>(defvar x 1)
 (defvar y (+ x 2))
 x
@@ -8,7 +9,8 @@ y</code></pre>
 <li>(.01 = 1/101) <code>1 2</code></li>
 <li>(.01 = 1/101) <code>error</code></li>
 </ul>
-<h2 id="scope1warmup_error">2. scope1::warmup_error</h2>
+
+## 2. scope1::warmup_error
 <pre><code>(defvar xyz 173)
 abc</code></pre>
 <ul>
@@ -16,7 +18,8 @@ abc</code></pre>
 <li>(.01 = 1/100) <code>173</code></li>
 <li>(.01 = 1/100) <code>possibly abc</code></li>
 </ul>
-<h2 id="scope1warmup_fun">3. scope1::warmup_fun</h2>
+
+## 3. scope1::warmup_fun
 <pre><code>(deffun (sum x y z)
   (+ x (+ y z)))
 (sum 2 1 3)</code></pre>
@@ -24,8 +27,8 @@ abc</code></pre>
 <li>(.99 = 100/101) <code>6</code></li>
 <li>(.01 = 1/101) <code>5</code></li>
 </ul>
-<h2 id="scope1local_def_is_possible">4.
-scope1::local_def_is_possible</h2>
+
+## 4. scope1::local_def_is_possible
 <pre><code>(deffun (addy x)
   (defvar y 1)
   (+ x y))
@@ -34,8 +37,8 @@ scope1::local_def_is_possible</h2>
 <li>(.97 = 98/101) <code>3</code></li>
 <li>(.03 = 3/101) <code>error</code></li>
 </ul>
-<h2 id="scope1refer_global_is_possible">5.
-scope1::refer_global_is_possible</h2>
+
+## 5. scope1::refer_global_is_possible
 <pre><code>(defvar y 1)
 (deffun (addy x)
   (+ x y))
@@ -44,7 +47,8 @@ scope1::refer_global_is_possible</h2>
 <li>(.77 = 79/102) <code>3</code></li>
 <li>(.23 = 23/102) <code>error</code> [IsolatedFun]</li>
 </ul>
-<h2 id="scope1defs_are_recursive">6. scope1::defs_are_recursive</h2>
+
+## 6. scope1::defs_are_recursive
 <pre><code>(deffun (addy x)
   (+ x y))
 (defvar y 1)
@@ -55,7 +59,8 @@ NestedDef]</li>
 <li>(.32 = 32/101) <code>3</code></li>
 <li>(.01 = 1/101) <code>2</code></li>
 </ul>
-<h2 id="scope1shadow_or_overwrite">7. scope1::shadow_or_overwrite</h2>
+
+## 7. scope1::shadow_or_overwrite
 <pre><code>(defvar y 100)
 (deffun (addy x)
   (defvar y 200)
@@ -66,8 +71,8 @@ NestedDef]</li>
 <li>(.05 = 5/101) <code>102</code></li>
 <li>(.04 = 4/101) <code>error</code></li>
 </ul>
-<h2 id="scope1shadow_rather_than_overwrite">8.
-scope1::shadow_rather_than_overwrite</h2>
+
+## 8. scope1::shadow_rather_than_overwrite
 <pre><code>(defvar y 100)
 (deffun (addy x)
   (defvar y 200)
@@ -78,8 +83,8 @@ scope1::shadow_rather_than_overwrite</h2>
 <li>(.06 = 6/102) <code>402</code> [FlatEnv]</li>
 <li>(.01 = 1/102) <code>error</code></li>
 </ul>
-<h2 id="scope1error_when_refer_to_undefined">9.
-scope1::error_when_refer_to_undefined</h2>
+
+## 9. scope1::error_when_refer_to_undefined
 <pre><code>(deffun (addy x)
   (defvar y 200)
   (+ x y))
@@ -88,7 +93,8 @@ scope1::error_when_refer_to_undefined</h2>
 <li>(.96 = 98/102) <code>error</code></li>
 <li>(.04 = 4/102) <code>402</code> [FlatEnv]</li>
 </ul>
-<h2 id="scope1what_is_x_1">10. scope1::what_is_x_1</h2>
+
+## 10. scope1::what_is_x_1
 <pre><code>(defvar x 1)
 (deffun (main)
   (defvar x 2)
@@ -102,7 +108,8 @@ scope1::error_when_refer_to_undefined</h2>
 <li>(.05 = 5/100) <code>1</code></li>
 <li>(.01 = 1/100) <code>3</code></li>
 </ul>
-<h2 id="scope1what_is_x_2">11. scope1::what_is_x_2</h2>
+
+## 11. scope1::what_is_x_2
 <pre><code>(defvar x 1)
 (deffun (get-x) x)
 
@@ -115,7 +122,8 @@ scope1::error_when_refer_to_undefined</h2>
 <li>(.29 = 30/102) <code>2</code> [FlatEnv]</li>
 <li>(.01 = 1/102) <code>error</code> [IsolatedFun]</li>
 </ul>
-<h2 id="scope1what_is_x_3">12. scope1::what_is_x_3</h2>
+
+## 12. scope1::what_is_x_3
 <pre><code>(defvar x 1)
 (deffun (main)
   (defvar x 2)
@@ -129,7 +137,8 @@ scope1::error_when_refer_to_undefined</h2>
 NestedDef]</li>
 <li>(.10 = 10/101) <code>2</code> [FlatEnv]</li>
 </ul>
-<h2 id="scope1what_is_x_4">13. scope1::what_is_x_4</h2>
+
+## 13. scope1::what_is_x_4
 <pre><code>(defvar x 1)
 (deffun (main)
   (deffun (get-x) x)
@@ -141,7 +150,8 @@ NestedDef]</li>
 <li>(.92 = 93/101) <code>2</code></li>
 <li>(.08 = 8/101) <code>1</code> [NestedDef]</li>
 </ul>
-<h2 id="scope1define_twice_global">14. scope1::define_twice_global</h2>
+
+## 14. scope1::define_twice_global
 <pre><code>(defvar x 1)
 (defvar x 2)
 x</code></pre>
@@ -150,7 +160,8 @@ x</code></pre>
 <li>(.36 = 36/100) <code>error</code></li>
 <li>(.01 = 1/100) <code>1</code></li>
 </ul>
-<h2 id="scope1define_twice_arg">15. scope1::define_twice_arg</h2>
+
+## 15. scope1::define_twice_arg
 <pre><code>(deffun (f x x)
   (+ x x))
 (f 1 2)</code></pre>
@@ -159,23 +170,24 @@ x</code></pre>
 <li>(.07 = 7/100) <code>3</code></li>
 <li>(.01 = 1/100) <code>2</code></li>
 </ul>
-<h2 id="scope2warmup_error">16. scope2::warmup_error</h2>
+
+## 16. scope2::warmup_error
 <pre><code>(/ 1 0)</code></pre>
 <ul>
 <li>(.97 = 92/95) <code>error</code></li>
 <li>(.02 = 2/95) <code>1</code></li>
 <li>(.01 = 1/95) <code>0</code></li>
 </ul>
-<h2 id="scope2defvar_binding_cause_evaluation">17.
-scope2::defvar_binding_cause_evaluation</h2>
+
+## 17. scope2::defvar_binding_cause_evaluation
 <pre><code>(defvar x (/ 1 0))
 42</code></pre>
 <ul>
 <li>(.71 = 67/95) <code>error</code></li>
 <li>(.29 = 28/95) <code>42</code> [Lazy]</li>
 </ul>
-<h2 id="scope2funcall_binding_cause_evaluation">18.
-scope2::funcall_binding_cause_evaluation</h2>
+
+## 18. scope2::funcall_binding_cause_evaluation
 <pre><code>(deffun (f x)
   42)
 (f (/ 1 0))</code></pre>
@@ -183,7 +195,8 @@ scope2::funcall_binding_cause_evaluation</h2>
 <li>(.92 = 87/95) <code>error</code></li>
 <li>(.08 = 8/95) <code>42</code> [Lazy]</li>
 </ul>
-<h2 id="scope2good_order">19. scope2::good_order</h2>
+
+## 19. scope2::good_order
 <pre><code>(defvar x 1)
 (defvar y (+ x 2))
 x
@@ -192,7 +205,8 @@ y</code></pre>
 <li>(.99 = 93/94) <code>1 3</code></li>
 <li>(.01 = 1/94) <code>error</code></li>
 </ul>
-<h2 id="scope2bad_order">20. scope2::bad_order</h2>
+
+## 20. scope2::bad_order
 <pre><code>(defvar y (+ x 2))
 (defvar x 1)
 x
@@ -201,8 +215,8 @@ y</code></pre>
 <li>(.57 = 54/95) <code>1 3</code> [Lazy]</li>
 <li>(.43 = 41/95) <code>error</code></li>
 </ul>
-<h2 id="scope2order_and_funcall_warmup">21.
-scope2::order_and_funcall_warmup</h2>
+
+## 21. scope2::order_and_funcall_warmup
 <pre><code>(deffun (getx)
   x)
 (defvar x 12)
@@ -213,7 +227,8 @@ y</code></pre>
 <li>(.24 = 23/95) <code>error</code> [DeepClosure, IsolatedFun,
 NestedDef]</li>
 </ul>
-<h2 id="scope2order_and_funcall_1">22. scope2::order_and_funcall_1</h2>
+
+## 22. scope2::order_and_funcall_1
 <pre><code>(deffun (getx)
   x)
 (defvar y (getx))
@@ -223,7 +238,8 @@ y</code></pre>
 <li>(.63 = 60/95) <code>error</code></li>
 <li>(.37 = 35/95) <code>12</code> [Lazy]</li>
 </ul>
-<h2 id="scope2order_and_funcall_2">23. scope2::order_and_funcall_2</h2>
+
+## 23. scope2::order_and_funcall_2
 <pre><code>(defvar x 2)
 (deffun (main)
   (deffun (getx)
@@ -238,7 +254,8 @@ y</code></pre>
 <li>(.28 = 26/94) <code>error</code></li>
 <li>(.13 = 12/94) <code>3</code> [Lazy]</li>
 </ul>
-<h2 id="mut-vars1scope_review_1">24. mut-vars1::scope_review_1</h2>
+
+## 24. mut-vars1::scope_review_1
 <pre><code>(defvar x 0)
 (defvar y x)
 (defvar x 2)
@@ -249,7 +266,8 @@ y</code></pre>
 <li>(.13 = 12/91) <code>2 0</code> [DefOrSet, NestedDef]</li>
 <li>(.01 = 1/91) <code>2 2</code></li>
 </ul>
-<h2 id="mut-vars1scope_review_2">25. mut-vars1::scope_review_2</h2>
+
+## 25. mut-vars1::scope_review_2
 <pre><code>(deffun (foo)
   y)
 (defvar y 1)
@@ -259,7 +277,8 @@ y</code></pre>
 <li>(.19 = 17/91) <code>error</code> [DeepClosure, IsolatedFun,
 NestedDef]</li>
 </ul>
-<h2 id="mut-vars1scope_review_3">26. mut-vars1::scope_review_3</h2>
+
+## 26. mut-vars1::scope_review_3
 <pre><code>(defvar x 1)
 (deffun (gety)
   (defvar y x)
@@ -271,7 +290,8 @@ NestedDef]</li>
 <li>(.30 = 27/91) <code>1</code> [DefOrSet, NestedDef]</li>
 <li>(.05 = 5/91) <code>2</code> [Lazy]</li>
 </ul>
-<h2 id="mut-vars2warmup_setbang">27. mut-vars2::warmup_setbang</h2>
+
+## 27. mut-vars2::warmup_setbang
 <pre><code>(defvar rent 100)
 (set! rent (* 100 2))
 rent</code></pre>
@@ -279,15 +299,16 @@ rent</code></pre>
 <li>(.99 = 91/92) <code>200</code></li>
 <li>(.01 = 1/92) <code>2000</code></li>
 </ul>
-<h2 id="mut-vars2update_undefined">28. mut-vars2::update_undefined</h2>
+
+## 28. mut-vars2::update_undefined
 <pre><code>(set! foobar 2)
 foobar</code></pre>
 <ul>
 <li>(.85 = 79/93) <code>error</code></li>
 <li>(.15 = 14/93) <code>2</code> [DefOrSet]</li>
 </ul>
-<h2 id="mut-vars2not_aliased_by_defvar_1">29.
-mut-vars2::not_aliased_by_defvar_1</h2>
+
+## 29. mut-vars2::not_aliased_by_defvar_1
 <pre><code>(defvar x 12)
 (defvar y x)
 (set! x 0)
@@ -299,8 +320,8 @@ y</code></pre>
 <li>(.02 = 2/93) <code>error</code></li>
 <li>(.01 = 1/93) <code>depends on implementation</code></li>
 </ul>
-<h2 id="mut-vars2not_aliased_by_defvar_2">30.
-mut-vars2::not_aliased_by_defvar_2</h2>
+
+## 30. mut-vars2::not_aliased_by_defvar_2
 <pre><code>(defvar m 40)
 (defvar n m)
 (set! n 22)
@@ -310,8 +331,8 @@ n</code></pre>
 <li>(.99 = 92/93) <code>40 22</code></li>
 <li>(.01 = 1/93) <code>40 11</code></li>
 </ul>
-<h2 id="mut-vars2not_aliased_by_defvar_3">31.
-mut-vars2::not_aliased_by_defvar_3</h2>
+
+## 31. mut-vars2::not_aliased_by_defvar_3
 <pre><code>(defvar x 1)
 (defvar y (+ x 100))
 (set! x 2)
@@ -321,8 +342,8 @@ y</code></pre>
 <li>(.99 = 92/93) <code>2 101</code></li>
 <li>(.01 = 1/93) <code>2 102</code></li>
 </ul>
-<h2 id="mut-vars2remote_update_possible">32.
-mut-vars2::remote_update_possible</h2>
+
+## 32. mut-vars2::remote_update_possible
 <pre><code>(defvar x 12)
 (deffun (f)
   (set! x 0))
@@ -333,8 +354,8 @@ x</code></pre>
 <li>(.05 = 5/93) <code>12</code> [DeepClosure, DefOrSet]</li>
 <li>(.05 = 5/93) <code>error</code> [IsolatedFun]</li>
 </ul>
-<h2 id="mut-vars2not_aliased_by_funarg_1">33.
-mut-vars2::not_aliased_by_funarg_1</h2>
+
+## 33. mut-vars2::not_aliased_by_funarg_1
 <pre><code>(defvar x 12)
 (deffun (f x)
   (set! x 0))
@@ -345,8 +366,8 @@ x</code></pre>
 <li>(.41 = 38/93) <code>0</code> [CallByRef, FlatEnv]</li>
 <li>(.08 = 7/93) <code>error</code></li>
 </ul>
-<h2 id="mut-vars2funs_remember_vars_not_vals">34.
-mut-vars2::funs_remember_vars_not_vals</h2>
+
+## 34. mut-vars2::funs_remember_vars_not_vals
 <pre><code>(defvar x 1)
 (deffun (getx)
   x)
@@ -360,8 +381,8 @@ mut-vars2::funs_remember_vars_not_vals</h2>
 <li>(.20 = 19/93) <code>1 1</code> [DeepClosure, DefOrSet]</li>
 <li>(.01 = 1/93) <code>1 2 1</code></li>
 </ul>
-<h2 id="mut-vars2not_aliased_by_funarg_2">35.
-mut-vars2::not_aliased_by_funarg_2</h2>
+
+## 35. mut-vars2::not_aliased_by_funarg_2
 <pre><code>(defvar x 12)
 (deffun (set-and-return y)
   (set! y 0)
@@ -373,8 +394,8 @@ mut-vars2::not_aliased_by_funarg_2</h2>
 <li>(.10 = 9/93) <code>0</code> [CallByRef]</li>
 <li>(.01 = 1/93) <code>23</code></li>
 </ul>
-<h2 id="mut-vars2not_aliased_by_funarg_3">36.
-mut-vars2::not_aliased_by_funarg_3</h2>
+
+## 36. mut-vars2::not_aliased_by_funarg_3
 <pre><code>(defvar x 12)
 (deffun (set-and-return y)
   (set! x 0)
@@ -388,7 +409,8 @@ x</code></pre>
 <li>(.03 = 3/92) <code>0 0</code> [CallByRef]</li>
 <li>(.03 = 3/92) <code>12</code></li>
 </ul>
-<h2 id="vectors1warmup_mvec">37. vectors1::warmup_mvec</h2>
+
+## 37. vectors1::warmup_mvec
 <pre><code>(defvar n 3)
 (deffun (f x)
   (+ x 1))
@@ -398,7 +420,8 @@ x</code></pre>
 <li>(.02 = 2/92) <code>error</code></li>
 <li>(.01 = 1/92) <code>#(n (f n))</code></li>
 </ul>
-<h2 id="vectors1vec_hetero">38. vectors1::vec_hetero</h2>
+
+## 38. vectors1::vec_hetero
 <pre><code>(mvec (mvec 1 2) 3)</code></pre>
 <ul>
 <li>(.96 = 88/92) <code>#(#(1 2) 3)</code></li>
@@ -406,7 +429,8 @@ x</code></pre>
 <li>(.01 = 1/92) <code>#(#(1 2) #(3))</code></li>
 <li>(.01 = 1/92) <code>#(#(3 1) 2)</code></li>
 </ul>
-<h2 id="vectors1vec_print">39. vectors1::vec_print</h2>
+
+## 39. vectors1::vec_print
 <pre><code>(mvec (mvec 123) (mvec 4 5))</code></pre>
 <ul>
 <li>(.91 = 84/92) <code>#(#(123) #(4 5))</code></li>
@@ -414,14 +438,16 @@ x</code></pre>
 <li>(.02 = 2/92) <code>error</code></li>
 <li>(.01 = 1/92) <code>#('#(231) '#(4 5))</code></li>
 </ul>
-<h2 id="vectors1warmup_veclen">40. vectors1::warmup_veclen</h2>
+
+## 40. vectors1::warmup_veclen
 <pre><code>(defvar v (mvec 1 2 3 4))
 (vec-len v)</code></pre>
 <ul>
 <li>(.99 = 90/91) <code>4</code></li>
 <li>(.01 = 1/91) <code>error</code></li>
 </ul>
-<h2 id="vectors1veclen_nested">41. vectors1::veclen_nested</h2>
+
+## 41. vectors1::veclen_nested
 <pre><code>(vec-len (mvec 4 (mvec 5 6)))</code></pre>
 <ul>
 <li>(.95 = 86/91) <code>2</code></li>
@@ -429,7 +455,8 @@ x</code></pre>
 <li>(.01 = 1/91) <code>1</code></li>
 <li>(.01 = 1/91) <code>error</code></li>
 </ul>
-<h2 id="vectors1warmup_vecref">42. vectors1::warmup_vecref</h2>
+
+## 42. vectors1::warmup_vecref
 <pre><code>(defvar v (mvec (mvec 10 20) (mvec 30 40)))
 (vec-ref (vec-ref v 1) 0)</code></pre>
 <ul>
@@ -439,7 +466,8 @@ x</code></pre>
 <li>(.02 = 2/91) <code>error</code></li>
 <li>(.01 = 1/91) <code>1</code></li>
 </ul>
-<h2 id="vectors1warmup_vecset_1">43. vectors1::warmup_vecset_1</h2>
+
+## 43. vectors1::warmup_vecset_1
 <pre><code>(defvar x (mvec 2 3))
 (vec-set! x 0 100)
 x</code></pre>
@@ -447,7 +475,8 @@ x</code></pre>
 <li>(.87 = 79/91) <code>#(100 3)</code></li>
 <li>(.13 = 12/91) <code>100 3</code></li>
 </ul>
-<h2 id="vectors1warmup_vecset_2">44. vectors1::warmup_vecset_2</h2>
+
+## 44. vectors1::warmup_vecset_2
 <pre><code>(defvar x (mvec 2))
 (vec-set! x 0 100)
 x</code></pre>
@@ -455,15 +484,16 @@ x</code></pre>
 <li>(.97 = 88/91) <code>#(100)</code></li>
 <li>(.03 = 3/91) <code>100</code></li>
 </ul>
-<h2 id="vectors1mpairs_are_mvec">45. vectors1::mpairs_are_mvec</h2>
+
+## 45. vectors1::mpairs_are_mvec
 <pre><code>(defvar mv (mvec 4 5))
 (left mv)</code></pre>
 <ul>
 <li>(.87 = 79/91) <code>4</code></li>
 <li>(.13 = 12/91) <code>error</code></li>
 </ul>
-<h2 id="vectors1vector_not_flatten">46.
-vectors1::vector_not_flatten</h2>
+
+## 46. vectors1::vector_not_flatten
 <pre><code>(defvar m (mvec 1 2))
 (vec-set! m 1 (mvec 3 4))
 (vec-ref m 2)</code></pre>
@@ -474,7 +504,8 @@ vectors1::vector_not_flatten</h2>
 <li>(.01 = 1/90) <code>#(3 4)</code></li>
 <li>(.01 = 1/90) <code>3</code></li>
 </ul>
-<h2 id="vectors2alias_with_defvar">47. vectors2::alias_with_defvar</h2>
+
+## 47. vectors2::alias_with_defvar
 <pre><code>(defvar x (mvec 100))
 (defvar y x)
 (vec-set! x 0 200)
@@ -485,8 +516,9 @@ y</code></pre>
 <li>(.01 = 1/92) <code>#(300)</code></li>
 <li>(.01 = 1/92) <code>error</code></li>
 </ul>
-<h2 id="vectors2alias_with_funcall">48.
-vectors2::alias_with_funcall</h2>
+
+## 48.
+vectors2::alias_with_funcall
 <pre><code>(defvar x (mvec 1 0))
 (deffun (f y)
   (vec-set! y 0 173))
@@ -496,7 +528,8 @@ x</code></pre>
 <li>(.90 = 83/92) <code>#(173 0)</code></li>
 <li>(.10 = 9/92) <code>#(1 0)</code> [CallsCopyStructs]</li>
 </ul>
-<h2 id="vectors2alias_var_in_mvec">49. vectors2::alias_var_in_mvec</h2>
+
+## 49. vectors2::alias_var_in_mvec
 <pre><code>(defvar x 3)
 (defvar v (mvec 1 2 x))
 (set! x 4)
@@ -506,8 +539,8 @@ v</code></pre>
 <li>(.24 = 22/92) <code>#(1 2 4)</code> [StructByRef]</li>
 <li>(.09 = 8/92) <code>error</code></li>
 </ul>
-<h2 id="vectors2alias_mvec_in_mvec">50.
-vectors2::alias_mvec_in_mvec</h2>
+
+## 50. vectors2::alias_mvec_in_mvec
 <pre><code>(defvar x (mvec 3))
 (defvar v (mvec 1 2 x))
 (vec-set! x 0 4)
@@ -518,8 +551,8 @@ v</code></pre>
 StructsCopyStructs]</li>
 <li>(.02 = 2/92) <code>error</code></li>
 </ul>
-<h2 id="vectors2alias_mvec_in_mvec_trick">51.
-vectors2::alias_mvec_in_mvec_trick</h2>
+
+## 51. vectors2::alias_mvec_in_mvec_trick
 <pre><code>(defvar x (mvec 3))
 (defvar v (mvec 1 2 x))
 (set! x 4)
@@ -530,8 +563,8 @@ v</code></pre>
 <li>(.08 = 7/92) <code>#(1 2 #(4))</code></li>
 <li>(.01 = 1/92) <code>#(1 2 3)</code></li>
 </ul>
-<h2 id="vectors2alias_mvec_in_mpair">52.
-vectors2::alias_mvec_in_mpair</h2>
+
+## 52. vectors2::alias_mvec_in_mpair
 <pre><code>(defvar v (mvec 1 2 3))
 (defvar vv (mpair v v))
 (vec-set! (right vv) 0 100)
@@ -541,8 +574,8 @@ vectors2::alias_mvec_in_mpair</h2>
 <li>(.18 = 17/92) <code>#(1 2 3)</code> [DefsCopyStructs]</li>
 <li>(.01 = 1/92) <code>error</code></li>
 </ul>
-<h2 id="vectors2warmup_circularity">53.
-vectors2::warmup_circularity</h2>
+
+## 53. vectors2::warmup_circularity
 <pre><code>(defvar x (mvec 1 0 2))
 (vec-set! x 1 x)
 (vec-len x)</code></pre>
@@ -552,8 +585,8 @@ vectors2::warmup_circularity</h2>
 <li>(.09 = 8/92) <code>run out of memory or time.</code></li>
 <li>(.01 = 1/92) <code>+inf</code></li>
 </ul>
-<h2 id="vectors2circularity_and_alias">54.
-vectors2::circularity_and_alias</h2>
+
+## 54. vectors2::circularity_and_alias
 <pre><code>(defvar v (mpair 10 7))
 (set-left! v v)
 (set-right! v 42)
@@ -565,8 +598,8 @@ StructsCopyStructs]</li>
 <li>(.07 = 6/92) <code>10</code></li>
 <li>(.03 = 3/92) <code>7</code></li>
 </ul>
-<h2 id="lambda1smol_quiz_var_as_arg">55.
-lambda1::smol_quiz_var_as_arg</h2>
+
+## 55. lambda1::smol_quiz_var_as_arg
 <pre><code>(defvar x 12)
 (deffun (f x)
   (set! x 0))
@@ -576,8 +609,8 @@ x</code></pre>
 <li>(.88 = 79/90) <code>12</code></li>
 <li>(.12 = 11/90) <code>0</code> [CallByRef, FlatEnv]</li>
 </ul>
-<h2 id="lambda1smol_quiz_seemingly_alias_a_var">56.
-lambda1::smol_quiz_seemingly_alias_a_var</h2>
+
+## 56. lambda1::smol_quiz_seemingly_alias_a_var
 <pre><code>(defvar x 5)
 (deffun (set1 x y)
   (set! x y))
@@ -593,8 +626,8 @@ x</code></pre>
 <li>(.09 = 8/90) <code>6 7</code> [CallByRef, FlatEnv]</li>
 <li>(.01 = 1/90) <code>error</code></li>
 </ul>
-<h2 id="lambda1smol_quiz_aliasing_mvec_in_mvec">57.
-lambda1::smol_quiz_aliasing_mvec_in_mvec</h2>
+
+## 57. lambda1::smol_quiz_aliasing_mvec_in_mvec
 <pre><code>(defvar x (mvec 1 7 3))
 (defvar pr (mpair x x))
 (vec-set! (right pr) 0 100)
@@ -604,8 +637,8 @@ pr</code></pre>
 <li>(.07 = 6/90) <code>#(#(1 7 3) #(100 7 3))</code>
 [DefsCopyStructs]</li>
 </ul>
-<h2 id="lambda1smol_quiz_circularity">58.
-lambda1::smol_quiz_circularity</h2>
+
+## 58. lambda1::smol_quiz_circularity
 <pre><code>(defvar x (mvec 2 3))
 (set-right! x x)
 (set-left! x x)
@@ -618,7 +651,8 @@ x</code></pre>
 [StructsCopyStructs]</li>
 <li>(.06 = 5/90) <code>error</code> [NoCircularity]</li>
 </ul>
-<h2 id="lambda1warmup_hof">59. lambda1::warmup_hof</h2>
+
+## 59. lambda1::warmup_hof
 <pre><code>(deffun (get) 42)
 (defvar f get)
 (defvar g f)
@@ -627,7 +661,8 @@ x</code></pre>
 <li>(.99 = 88/89) <code>42</code></li>
 <li>(.01 = 1/89) <code>error</code> [FunNotVal]</li>
 </ul>
-<h2 id="lambda1fun_as_parameter">60. lambda1::fun_as_parameter</h2>
+
+## 60. lambda1::fun_as_parameter
 <pre><code>(deffun (twice f x)
   (f (f x)))
 (deffun (double x)
@@ -639,7 +674,8 @@ x</code></pre>
 <li>(.04 = 4/90) <code>2</code></li>
 <li>(.01 = 1/90) <code>8</code></li>
 </ul>
-<h2 id="lambda1fun_as_output">61. lambda1::fun_as_output</h2>
+
+## 61. lambda1::fun_as_output
 <pre><code>(deffun (add1 x) (+ x 1))
 (deffun (g) add1)
 (defvar f (g))
@@ -648,7 +684,8 @@ x</code></pre>
 <li>(.71 = 64/90) <code>101</code></li>
 <li>(.29 = 26/90) <code>error</code> [FunNotVal, IsolatedFun]</li>
 </ul>
-<h2 id="lambda1fun_in_vectors">62. lambda1::fun_in_vectors</h2>
+
+## 62. lambda1::fun_in_vectors
 <pre><code>(deffun (add1 n)
   (+ n 1))
 (defvar v (mvec add1))
@@ -659,7 +696,8 @@ x</code></pre>
 <li>(.08 = 7/90) <code>2</code></li>
 <li>(.02 = 2/90) <code>1</code></li>
 </ul>
-<h2 id="lambda2read_local1">63. lambda2::read_local1</h2>
+
+## 63. lambda2::read_local1
 <pre><code>(deffun (make-getter)
   (defvar x 1)
   (deffun (get-x) x)
@@ -670,7 +708,8 @@ x</code></pre>
 <li>(.91 = 82/90) <code>1</code></li>
 <li>(.09 = 8/90) <code>error</code> [FunNotVal, IsolatedFun]</li>
 </ul>
-<h2 id="lambda2read_local2">64. lambda2::read_local2</h2>
+
+## 64. lambda2::read_local2
 <pre><code>(deffun (make-getter x)
   (deffun (get-x) x)
   get-x)
@@ -681,7 +720,8 @@ x</code></pre>
 <ul>
 <li>(1.00 = 89/89) <code>1 2</code></li>
 </ul>
-<h2 id="lambda2fun_ref_env">65. lambda2::fun_ref_env</h2>
+
+## 65. lambda2::fun_ref_env
 <pre><code>(deffun (make-addy y)
   (deffun (addy x)
     (+ x y))
@@ -695,7 +735,8 @@ x</code></pre>
 <li>(.25 = 22/89) <code>error</code> [FunNotVal, IsolatedFun]</li>
 <li>(.01 = 1/89) <code>12 12</code></li>
 </ul>
-<h2 id="lambda2state">66. lambda2::state</h2>
+
+## 66. lambda2::state
 <pre><code>(defvar x 1)
 (deffun (make-f)
   (deffun (addx y)
@@ -710,7 +751,8 @@ x</code></pre>
 <li>(.16 = 14/90) <code>error</code> [FunNotVal, IsolatedFun]</li>
 <li>(.04 = 4/90) <code>2</code></li>
 </ul>
-<h2 id="lambda2counter">67. lambda2::counter</h2>
+
+## 67. lambda2::counter
 <pre><code>(deffun (make-counter count)
   (deffun (counter)
     (set! count (+ count 1))
@@ -732,7 +774,8 @@ x</code></pre>
 <li>(.01 = 1/90) <code>error</code> [DefOrSet, FunNotVal,
 IsolatedFun]</li>
 </ul>
-<h2 id="lambda2syntax_pitfall">68. lambda2::syntax_pitfall</h2>
+
+## 68. lambda2::syntax_pitfall
 <pre><code>(deffun (f a b) a + b)
 (f 5 10)</code></pre>
 <ul>
@@ -741,7 +784,8 @@ IsolatedFun]</li>
 <li>(.09 = 8/90) <code>10</code></li>
 <li>(.01 = 1/90) <code>5 + 10</code></li>
 </ul>
-<h2 id="lambda3curry_lambda">69. lambda3::curry_lambda</h2>
+
+## 69. lambda3::curry_lambda
 <pre><code>(deffun (f x)
   (lambda (y) (+ x y)))
 (defvar x 0)
@@ -752,8 +796,8 @@ IsolatedFun]</li>
 <li>(.01 = 1/90) <code>1</code></li>
 <li>(.01 = 1/90) <code>2</code></li>
 </ul>
-<h2 id="lambda3lambda_remembers_env">70.
-lambda3::lambda_remembers_env</h2>
+
+## 70. lambda3::lambda_remembers_env
 <pre><code>(defvar x 1)
 (defvar f
   (lambda (y)
@@ -766,7 +810,8 @@ lambda3::lambda_remembers_env</h2>
 <li>(.03 = 3/90) <code>error</code> [IsolatedFun]</li>
 <li>(.01 = 1/90) <code>lambda</code></li>
 </ul>
-<h2 id="lambda3counter_lambda">71. lambda3::counter_lambda</h2>
+
+## 71. lambda3::counter_lambda
 <pre><code>(deffun (make-counter count)
   (lambda ()
     (set! count (+ count 1))
