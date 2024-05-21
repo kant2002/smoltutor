@@ -1,5 +1,7 @@
-<h1 id="readme">README</h1>
-<h2 id="language-differences">Language Differences</h2>
+# README
+
+## Language Differences
+
 <p>As explained in the paper, the SMoL implementation that was used in
 SMoL Quizzes (and Quizius) is slightly different from the SMoL language
 as specified in the paper. <a
@@ -20,7 +22,9 @@ Order.html</a> explain how we randomized)</li>
 <h2 id="refutation-text">Refutation Text</h2>
 <p>The files in <a href="./Refutation%20Text">./Refutation Text</a> are
 refutation texts.</p>
-<h2 id="results">Results</h2>
+
+## Results
+
 <p><a href="./Quiz%20Results.html">./Quiz Results.html</a> presents
 summative statistics of the results: how many (in percentages) students
 made each choice. Wrong choices are labeled with misinterpreters.</p>
