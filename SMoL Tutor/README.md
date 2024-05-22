@@ -23,6 +23,6 @@
 
 [Tutor Results](./Tutor%20Results) представляє підсумкову статистику результатів: скільки (у відсотках) учнів зробило кожен вибір. Неправильний вибір позначається із неправильними інтерпретаціями.
 
-## JavaScript and Python Translation of the Programs
+## Переклади програм на JavaScript та Python
 
 [Translated Programs](./Translated_Programs)
