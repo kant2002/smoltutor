@@ -1,10 +1,5 @@
-Quiz 1 keeps `arithmetic operators` and `0 as condition` at the beginning and randomizes the order of all remaining questions.
+Вікторина 1 залишає `arithmetic operators` та `0 as condition` на початку та рандомізує послідовність усіх залишившихся питань.
 
-Quiz 2 randomizes the order of all questions.
+Вікторина 2 рандомізує послідовність усіх питань.
 
-Quiz 3 organizes questions into question groups. The order of groups
-is randomized. Questions within the same group are presented in a row
-but in a randomized order. Questions named as
-`fun and state i/4` are in the same group. Questions named as
-`eq? fun fun i/3` are in another group. Each one of the
-remaining questions has its own group.
+Вікторина 3 організовує питання у групи питаннь. Послідовність груп рандомізована. Питання у одній групі показуються послідовно, але у рандомізованій послідовності. Питання позначені як `fun and state i/4` у одній групі. Питання названі як `eq? fun fun i/3` у іншій групі. Кожні із залишившихся питань маються свою власну групу.
