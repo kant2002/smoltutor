@@ -152,12 +152,6 @@ display: none;
 
 
 
-
-</head>
-
-<body>
-
-
 <div class="container-fluid main-container">
 
 
@@ -1280,6 +1274,3 @@ $(document).ready(function () {
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
-
-</body>
-</html>
