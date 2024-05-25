@@ -212,10 +212,9 @@ display: none;
 
 # Про цей файл
 
-This file presents all important statistics in the paper. When
-applicable, it also presents a R program that computes the statistics.
-Section headers that are in quotes are quotes from the paper. Those
-sections provide evidences for the quoted words.
+Цей файл містить усі важливі статистичні дані в статті. Коли
+це має сенс, він також представляє програму R, яка обчислює статистику.
+Заголовки розділів, взяті в лапки, є цитатами з статті. Ці розділи наводять докази цитованих слів.
 
 <div id="include-libraries" class="section level2">
 
@@ -232,7 +231,7 @@ library(tidyverse)
 ```r
 df_tasks = (
   read_csv("SMoL Tutor/Tasks.csv")
-  # remove trailing line break
+  # видалили кінцевий розрив рядка
   %>% mutate(Program = str_replace(Program, "[\\\\]n$", ""))
 )
 df_tasks
@@ -409,7 +408,7 @@ get_cr = function(df) {
 
 ## «Деякі запитання та відповіді учнів з Тестів» (Таблиця 2-4)
 
-Check [./SMoL Quizzes/Quiz Results](./SMoL%20Quizzes/Quiz%20Results.md)
+Перевірте [./SMoL Quizzes/Quiz Results](./SMoL%20Quizzes/Quiz%20Results.md)
 
 </div>
 </div>
@@ -421,12 +420,8 @@ Check [./SMoL Quizzes/Quiz Results](./SMoL%20Quizzes/Quiz%20Results.md)
 
 ## «на практиці студенти витратили приблизно 9,8 (медіана) хвилин».
 
-The following computation (529 sec = 8.8 min) under-estimates the
-time span because we only present results of the interpreting questions.
-The tutor always shows a brief textual description before the first
-interpreting question. And the last questions are not sometimes
-interpreting questions. However, the difference is small. Median time of
-the raw data is 590.75 seconds, which is 9.85 minutes.
+Наступне обчислення (529 с = 8,8 хв) занижує проміжок часу, оскільки ми представляємо лише результати інтерпретації питань.
+Викладач завжди показує короткий текстовий опис перед першим питанням інтерпретації. І останні питання іноді не є питанням інтерпретації. Однак різниця невелика. Середній час необроблених даних становить 590,75 секунд, тобто 9,85 хвилин.
 
 ```r
 (
@@ -458,11 +453,11 @@ the raw data is 590.75 seconds, which is 9.85 minutes.
 
 37:
 
-- 13 Questions in Quiz 1
-- 10 Questions in Quiz 2
-- 14 Questions in Quiz 3
+- 13 питань у тесті 1
+- 10 питань у тесті 2
+- 14 питань у тесті 3
 
-Check the [Instrument](./SMoL%20Quizzes/Instrument/) to confirm.
+Перевірте [Instrument](./SMoL%20Quizzes/Instrument/) для підтверждення.
 
 </div>
 <div id="we-added-52-more-programs-to-arrive-at-a-total-of-89." class="section level2">
@@ -519,32 +514,32 @@ N_tutor_questions - 37
 
 ## “У тестах SMoL часто є дуже мало неправильних виборів: …”
 
-In Quiz 1,
+У тесті 1,
 
-- 8 questions have 3 choices (including `Other`)
-- 3 questions have 4 choices
-- 1 questions have 5 choices
-- 1 questions have 6 choices
+- 8 питань мали 3 відповідей (включаючи `Інше`)
+- 3 питань мали 4 відповідей
+- 1 питань мали 5 відповідей
+- 1 питань мали 6 відповідей
 
-In Quiz 2,
+У тесті 2,
 
-- 7 questions have 3 choices
-- 2 questions have 4 choices
-- 1 questions have 5 choices
+- 7 питань мали 3 відповідей
+- 2 питань мали 4 відповідей
+- 1 питань мали 5 відповідей
 
-In Quiz 3,
+У тесті 3,
 
-- 11 questions have 3 choices
-- 2 questions have 4 choices
-- 1 questions have 5 choices
+- 11 питань мали 3 відповідей
+- 2 питань мали 4 відповідей
+- 1 питань мали 5 відповідей
 
-In total, 
-* 26 questions have 3 choices 
-* 7 questions have 4 choices 
-* 3 questions have 5 choices 
-* 1 questions have 6 choices
+Взагалі, 
+* 26 питань мали 3 відповідей 
+* 7 питань мали 4 відповідей 
+* 3 питань мали 5 відповідей 
+* 1 питань мали 6 відповідей
 
-Count the instruments to confirm.
+Підрахуйте інструменти для перевірки.
 
 </div>
 <div id="we-ended-up-increasing-the-number-of-choices-substantially" class="section level2">
@@ -624,11 +619,13 @@ Count the instruments to confirm.
 ## # ℹ 69 more rows
 ```
 
+Найчастіша неправильна відповідь (lambda2::syntax_pitfall) — Lisp-ічна. Наступні дві неправильні відповіді (vectors2::alias_mvec_in_mvec_trick) і (lambda1::smol_quiz_circularity) нам здається важко віднести до помилкового уявлення.
+
 The top wrong answer (lambda2::syntax_pitfall) is Lispy. The next two
 wrong answers (vectors2::alias_mvec_in_mvec_trick) and (lambda1::smol_quiz_circularity) seem difficult for us to attribute to a
 misconception.
 
-There is a gap between the third P (0.23) and the fourth (0.13).
+Між третім (0,23) і четвертим (0,13) P є розрив.
 
 </div>
 <div id="misconceptions-identified-by-the-smol-tutor-tables-6-8" class="section level2">
