@@ -1,3 +1,7 @@
+# Paper.Rmd
+
+#### 2024-03-02
+
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
 document.addEventListener('DOMContentLoaded', function(e) {
@@ -149,10 +153,6 @@ display: none;
 
 
 <div class="container-fluid main-container">
-
-# Paper.Rmd
-
-#### 2024-03-02
 
 - [Про цей файл](#about-this-file)
   - [підключити бібліотеки](#include-libraries)
