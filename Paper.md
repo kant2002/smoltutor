@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function(e) {
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -188,7 +187,7 @@ display: none;
 
 </div>
 
-<div id="about-this-file" class="section level1">
+<div id="about-this-file" class="section level1"></div>
 
 # Про цей файл
 
@@ -196,7 +195,7 @@ display: none;
 це має сенс, він також представляє програму R, яка обчислює статистику.
 Заголовки розділів, взяті в лапки, є цитатами з статті. Ці розділи наводять докази цитованих слів.
 
-<div id="include-libraries" class="section level2">
+<div id="include-libraries" class="section level2"></div>
 
 ## підключити бібліотеки
 
@@ -204,7 +203,7 @@ display: none;
 library(tidyverse)
 ```
 
-<div id="load-tasks-information" class="section level2">
+<div id="load-tasks-information" class="section level2"></div>
 
 ## завантажити інформацію про завдання
 
@@ -234,8 +233,7 @@ df_tasks
 ## # ℹ 61 more rows
 ```
 
-</div>
-<div id="load-wrong-answers-tagged-with-misinterpreters" class="section level2">
+<div id="load-wrong-answers-tagged-with-misinterpreters" class="section level2"></div>
 
 ## завантажити невірні відповіді помарковані із невірною інтерпретацією
 
@@ -272,8 +270,7 @@ df_misinterpreters
 ## # ℹ 63 more rows
 ```
 
-</div>
-<div id="load-the-dataset" class="section level2">
+<div id="load-the-dataset" class="section level2"></div>
 
 ## завантажити датасет
 
@@ -308,8 +305,7 @@ dfs$Univ1
 ## # ℹ 1 more variable: Result <chr>
 ```
 
-</div>
-<div id="define-helper-functions" class="section level2">
+<div id="define-helper-functions" class="section level2"></div>
 
 ## визначити допоміжні функції
 
