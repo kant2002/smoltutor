@@ -149,45 +149,37 @@ display: none;
 
 <!-- code folding -->
 
-
-
-<div class="container-fluid main-container">
-
-- [Про цей файл](#about-this-file)
-  - [підключити бібліотеки](#include-libraries)
-  - [завантажити інформацію про завдання](#load-tasks-information)
-  - [завантажити невірні відповіді помарковані із невірною інтерпретацією](#load-wrong-answers-tagged-with-misinterpreters)
-  - [завантажити датасет](#load-the-dataset)
-  - [визначити допоміжні функції](#define-helper-functions)
-- [Секція 5.3: SMoL Quizzes](#section-5.3-the-smol-quizzes)
-  - [«Деякі запитання та відповіді учнів з Тестів» (Таблиця 2-4)](#some-questions-and-student-answers-from-quiz-tables-2-4)
-- [Розділ 6.1: Взаємодія з користувачем](#section-6.1-the-user-experience)
-  - [«на практиці студенти витратили приблизно 9,8 (медіана) хвилин».](#in-practice-students-spent-about-9.8-median-minutes.)
-- [Розділ 6.2: Збір задач для репетитора](#section-6.2-collating-problems-for-the-tutor)
-  - [«Починаючи з 37 програм у тестах SMoL»](#starting-with-the-37-programs-in-the-smol-quizzes)
-  - [«ми додали ще 52 програми, щоб отримати загальну кількість 89».](#we-added-52-more-programs-to-arrive-at-a-total-of-89.)
-  - [“У тестах SMoL часто є дуже мало неправильних виборів: …”](#the-smol-quizzes-often-have-very-few-wrong-choices)
-  - [“зрештою ми значно збільшили кількість варіантів: …”](#we-ended-up-increasing-the-number-of-choices-substantially)
-- [Розділ 7.2: Каталог хибних уявлень](#section-7.2-a-catalog-of-misconceptions)
-  - [“ми виявили розрив між 23% і 13%, і, отже, взяли 14% як порогове значення”](#we-found-a-gap-between-23-and-13-and-hence-took-14-as-the-threshold)
-  - [«хибні уявлення, виявлені викладачем SMoL» (Таблиці 6-8)](#misconceptions-identified-by-the-smol-tutor-tables-6-8)
-- [Розділ 8: Чи репетитор ефективний?](#section-8-is-the-tutor-effective)
-  - [«Скільки студентів обрали неправильну відповідь, яка (однозначно) представляє неправильне уявлення?» (Малюнок 4)](#how-many-students-chose-a-wrong-answer-that-uniquely-represents-a-misconception-figure-4)
-  - [«Ми також зробили логістичну регресію, щоб побачити, чи є ці покращення значними»](#we-also-perform-a-logistic-regression-to-see-whether-these-improvements-are-significant)
-  - [«лише 40 із 71 прийнятних проблем (після видалення модулів, які не належать до SMoL) були корисними»](#only-40-of-the-71-eligible-problems-after-removing-the-non-smol-modules-were-useful)
-- [Розділ 9: Ефективність щодо інших популяцій](#section-9-performance-on-other-populations)
-  - [«Репетитор використовувався в одному курсі …, який пройшли 12 студентів»](#the-tutor-was-used-in-one-course-taken-by-12-students)
-  - [«597 людей почали з першого модуля, а 103 користувача дійшли до останнього».](#people-started-with-the-first-module-and-103-users-made-it-to-the-last-one.)
-  - [«Ми зазначаємо, що дати подання на публічну інстанцію та семестр в Університеті 1 не збігаються»](#we-note-that-there-is-no-overlap-between-the-dates-of-submission-on-the-public-instance-and-the-semester-at-university-1)
-  - [«ми обчислили рангову кореляцію Спірмена ρ»](#we-computed-a-spearmans-rank-correlation-ρ)
-    - [«Між початковим університетом і університетом 2»](#between-the-original-university-and-university-2)
-    - [«Між початковим університетом і онлайн-популяцією»](#between-the-original-university-and-the-online-population)
-- [Розділ 11: Загрози валідності](#section-11-threats-to-validity)
-  - [«в середньому лише 0,4% (sd = 0,6%) значень відсутні»](#on-average-only-0.4-sd-0.6-of-values-are-missing)
-
-</div>
-
-<div id="about-this-file" class="section level1"></div>
+- [Про цей файл](#про-цей-файл)
+  - [підключити бібліотеки](#підключити-бібліотеки)
+  - [завантажити інформацію про завдання](#завантажити-інформацію-про-завдання)
+  - [завантажити невірні відповіді помарковані із невірною інтерпретацією](#завантажити-невірні-відповіді-помарковані-із-невірною-інтерпретацією)
+  - [завантажити датасет](#завантажити-датасет)
+  - [визначити допоміжні функції](#визначити-допоміжні-функції)
+- [Розділ 5.3: SMoL тести](#розділ-53-smol-тести)
+  - [«Деякі запитання та відповіді учнів з Тестів» (Таблиця 2-4)](#«деякі-запитання-та-відповіді-учнів-з-тестів»-таблиця-2-4)
+- [Розділ 6.1: Взаємодія з користувачем](#розділ-61-взаємодія-з-користувачем)
+  - [«на практиці студенти витратили приблизно 9,8 (медіана) хвилин».](#«на-практиці-студенти-витратили-приблизно-98-медіана-хвилин»)
+- [Розділ 6.2: Збір задач для репетитора](#розділ-62-збір-задач-для-репетитора)
+  - [«Починаючи з 37 програм у тестах SMoL»](#«починаючи-з-37-програм-у-тестах-smol»)
+  - [«ми додали ще 52 програми, щоб отримати загальну кількість 89».](#«ми-додали-ще-52-програми-щоб-отримати-загальну-кількість-89»)
+  - [“У тестах SMoL часто є дуже мало неправильних виборів: …”](#у-тестах-smol-часто-є-дуже-мало-неправильних-виборів-)
+  - [“зрештою ми значно збільшили кількість варіантів: …”](#зрештою-ми-значно-збільшили-кількість-варіантів-)
+- [Розділ 7.2: Каталог хибних уявлень](#розділ-72-каталог-хибних-уявлень)
+  - [“ми виявили розрив між 23% і 13%, і, отже, взяли 14% як порогове значення”](#ми-виявили-розрив-між-23-і-13-і-отже-взяли-14-як-порогове-значення)
+  - [«хибні уявлення, виявлені викладачем SMoL» (Таблиці 6-8)](#«хибні-уявлення-виявлені-викладачем-smol»-таблиці-6-8)
+- [Розділ 8: Чи репетитор ефективний?](#розділ-8-чи-репетитор-ефективний)
+  - [«Скільки студентів обрали неправильну відповідь, яка (однозначно) представляє неправильне уявлення?» (Малюнок 4)](#«скільки-студентів-обрали-неправильну-відповідь-яка-однозначно-представляє-неправильне-уявлення»-малюнок-4)
+  - [«Ми також зробили логістичну регресію, щоб побачити, чи є ці покращення значними»](#«ми-також-зробили-логістичну-регресію-щоб-побачити-чи-є-ці-покращення-значними»)
+  - [«лише 40 із 71 прийнятних проблем (після видалення модулів, які не належать до SMoL) були корисними»](#«лише-40-із-71-прийнятних-проблем-після-видалення-модулів-які-не-належать-до-smol-були-корисними»)
+- [Розділ 9: Ефективність щодо інших популяцій](#розділ-9-ефективність-щодо-інших-популяцій)
+  - [«Репетитор використовувався в одному курсі …, який пройшли 12 студентів»](#«репетитор-використовувався-в-одному-курсі--який-пройшли-12-студентів»)
+  - [«597 людей почали з першого модуля, а 103 користувача дійшли до останнього».](#«597-людей-почали-з-першого-модуля-а-103-користувача-дійшли-до-останнього»)
+  - [«Ми зазначаємо, що дати подання на публічну інстанцію та семестр в Університеті 1 не збігаються»](#«ми-зазначаємо-що-дати-подання-на-публічну-інстанцію-та-семестр-в-університеті-1-не-збігаються»)
+  - [«ми обчислили рангову кореляцію Спірмена ρ»](#«ми-обчислили-рангову-кореляцію-спірмена-ρ»)
+    - [«Між початковим університетом і університетом 2»](#«між-початковим-університетом-і-університетом-2»)
+    - [«Між початковим університетом і онлайн-популяцією»](#«між-початковим-університетом-і-онлайн-популяцією»)
+- [Розділ 11: Загрози валідності](#розділ-11-загрози-валідності)
+  - [«в середньому лише 0,4% (sd = 0,6%) значень відсутні»](#«в-середньому-лише-04-sd--06-значень-відсутні»)
 
 # Про цей файл
 
@@ -195,15 +187,11 @@ display: none;
 це має сенс, він також представляє програму R, яка обчислює статистику.
 Заголовки розділів, взяті в лапки, є цитатами з статті. Ці розділи наводять докази цитованих слів.
 
-<div id="include-libraries" class="section level2"></div>
-
 ## підключити бібліотеки
 
 ```r
 library(tidyverse)
 ```
-
-<div id="load-tasks-information" class="section level2"></div>
 
 ## завантажити інформацію про завдання
 
@@ -232,8 +220,6 @@ df_tasks
 ## 10     10 scope1   what_is_x_1                   "(defvar x 1)\\n(deffun… 2     
 ## # ℹ 61 more rows
 ```
-
-<div id="load-wrong-answers-tagged-with-misinterpreters" class="section level2"></div>
 
 ## завантажити невірні відповіді помарковані із невірною інтерпретацією
 
@@ -270,8 +256,6 @@ df_misinterpreters
 ## # ℹ 63 more rows
 ```
 
-<div id="load-the-dataset" class="section level2"></div>
-
 ## завантажити датасет
 
 ```r
@@ -304,8 +288,6 @@ dfs$Univ1
 ## # ℹ 6,639 more rows
 ## # ℹ 1 more variable: Result <chr>
 ```
-
-<div id="define-helper-functions" class="section level2"></div>
 
 ## визначити допоміжні функції
 
@@ -374,25 +356,13 @@ get_cr = function(df) {
 }
 ```
 
-</div>
-</div>
-<div id="section-5.3-the-smol-quizzes" class="section level1">
-
-# Секція 5.3: SMoL Quizzes
-
-<div id="some-questions-and-student-answers-from-quiz-tables-2-4" class="section level2">
+# Розділ 5.3: SMoL тести
 
 ## «Деякі запитання та відповіді учнів з Тестів» (Таблиця 2-4)
 
 Перевірте [./SMoL Quizzes/Quiz Results](./SMoL%20Quizzes/Quiz%20Results.md)
 
-</div>
-</div>
-<div id="section-6.1-the-user-experience" class="section level1">
-
 # Розділ 6.1: Взаємодія з користувачем
-
-<div id="in-practice-students-spent-about-9.8-median-minutes." class="section level2">
 
 ## «на практиці студенти витратили приблизно 9,8 (медіана) хвилин».
 
@@ -417,13 +387,8 @@ get_cr = function(df) {
 ##   <drtn>             <drtn>          
 ## 1 529 secs           2469.479 secs
 ```
-</div>
-</div>
-<div id="section-6.2-collating-problems-for-the-tutor" class="section level1">
 
 # Розділ 6.2: Збір задач для репетитора
-
-<div id="starting-with-the-37-programs-in-the-smol-quizzes" class="section level2">
 
 ## «Починаючи з 37 програм у тестах SMoL»
 
@@ -434,9 +399,6 @@ get_cr = function(df) {
 - 14 питань у тесті 3
 
 Перевірте [Instrument](./SMoL%20Quizzes/Instrument/) для підтверждення.
-
-</div>
-<div id="we-added-52-more-programs-to-arrive-at-a-total-of-89." class="section level2">
 
 ## «ми додали ще 52 програми, щоб отримати загальну кількість 89».
 
@@ -485,9 +447,6 @@ N_tutor_questions - 37
 ## [1] 52
 ```
 
-</div>
-<div id="the-smol-quizzes-often-have-very-few-wrong-choices" class="section level2">
-
 ## “У тестах SMoL часто є дуже мало неправильних виборів: …”
 
 У тесті 1,
@@ -516,9 +475,6 @@ N_tutor_questions - 37
 * 1 питань мали 6 відповідей
 
 Підрахуйте інструменти для перевірки.
-
-</div>
-<div id="we-ended-up-increasing-the-number-of-choices-substantially" class="section level2">
 
 ## “зрештою ми значно збільшили кількість варіантів: …”
 
@@ -553,13 +509,7 @@ N_tutor_questions - 37
 ## 11        14       1          89
 ```
 
-</div>
-</div>
-<div id="section-7.2-a-catalog-of-misconceptions" class="section level1">
-
 # Розділ 7.2: Каталог хибних уявлень
-
-<div id="we-found-a-gap-between-23-and-13-and-hence-took-14-as-the-threshold" class="section level2">
 
 ## “ми виявили розрив між 23% і 13%, і, отже, взяли 14% як порогове значення”
 
@@ -603,20 +553,11 @@ misconception.
 
 Між третім (0,23) і четвертим (0,13) P є розрив.
 
-</div>
-<div id="misconceptions-identified-by-the-smol-tutor-tables-6-8" class="section level2">
-
 ## «хибні уявлення, виявлені викладачем SMoL» (Таблиці 6-8)
 
 Перевірте [./SMoL Tutor/Tutor Results.html](./SMoL%20Tutor/Tutor%20Results)
 
-</div>
-</div>
-<div id="section-8-is-the-tutor-effective" class="section level1">
-
 # Розділ 8: Чи репетитор ефективний?
-
-<div id="how-many-students-chose-a-wrong-answer-that-uniquely-represents-a-misconception-figure-4" class="section level2">
 
 ## «Скільки студентів обрали неправильну відповідь, яка (однозначно) представляє неправильне уявлення?» (Малюнок 4)
 
@@ -706,15 +647,12 @@ print(p)
 
 <img src="Misconceptions_Decay.png" width="672" />
 
-```
+```r
 ggsave(
   "Misconceptions_Decay.png",
   width = 7, height = 8
   ) # depends on `svglite`
 ```
-
-</div>
-<div id="we-also-perform-a-logistic-regression-to-see-whether-these-improvements-are-significant" class="section level2">
 
 ## «Ми також зробили логістичну регресію, щоб побачити, чи є ці покращення значними»
 
@@ -1004,9 +942,6 @@ for (MI in MIs) {
 ## -------
 ```
 
-</div>
-<div id="only-40-of-the-71-eligible-problems-after-removing-the-non-smol-modules-were-useful" class="section level2">
-
 ## «лише 40 із 71 прийнятних проблем (після видалення модулів, які не належать до SMoL) були корисними»
 
 ```r
@@ -1032,13 +967,7 @@ n_distinct(
 ## [1] 71
 ```
 
-</div>
-</div>
-<div id="section-9-performance-on-other-populations" class="section level1">
-
 # Розділ 9: Ефективність щодо інших популяцій
-
-<div id="the-tutor-was-used-in-one-course-taken-by-12-students" class="section level2">
 
 ## «Репетитор використовувався в одному курсі …, який пройшли 12 студентів»
 
@@ -1052,9 +981,6 @@ n_distinct(
 ```
 ## [1] 12
 ```
-
-</div>
-<div id="people-started-with-the-first-module-and-103-users-made-it-to-the-last-one." class="section level2">
 
 ## «597 людей почали з першого модуля, а 103 користувача дійшли до останнього».
 
@@ -1083,9 +1009,6 @@ n_distinct(
 ## 9 lambda3                   103
 ```
 
-</div>
-<div id="we-note-that-there-is-no-overlap-between-the-dates-of-submission-on-the-public-instance-and-the-semester-at-university-1" class="section level2">
-
 ## «Ми зазначаємо, що дати подання на публічну інстанцію та семестр в Університеті 1 не збігаються»
 
 ```r
@@ -1102,9 +1025,6 @@ d = (
 ```
 
 <img src="img2.png" width="672" />
-
-</div>
-<div id="we-computed-a-spearmans-rank-correlation-ρ" class="section level2">
 
 ## «ми обчислили рангову кореляцію Спірмена ρ»
 
@@ -1133,8 +1053,6 @@ analyze_cor = function(dn1, dn2) {
 }
 ```
 
-<div id="between-the-original-university-and-university-2" class="section level3">
-
 ### «Між початковим університетом і університетом 2»
 
 ```r
@@ -1154,9 +1072,6 @@ analyze_cor("Univ1", "Univ2")
 ```
 
 <img src="img3.png" width="672" />
-
-</div>
-<div id="between-the-original-university-and-the-online-population" class="section level3">
 
 ### «Між початковим університетом і онлайн-популяцією»
 
@@ -1178,14 +1093,7 @@ analyze_cor("Univ1", "Book")
 
 <img src="img4.png" width="672" />
 
-</div>
-</div>
-</div>
-<div id="section-11-threats-to-validity" class="section level1">
-
 # Розділ 11: Загрози валідності
-
-<div id="on-average-only-0.4-sd-0.6-of-values-are-missing" class="section level2">
 
 ## «в середньому лише 0,4% (sd = 0,6%) значень відсутні»
 
@@ -1208,14 +1116,6 @@ analyze_cor("Univ1", "Book")
 ##             <dbl>         <dbl>
 ## 1         0.00436       0.00639
 ```
-
-</div>
-</div>
-
-
-
-
-</div>
 
 <script>
 
