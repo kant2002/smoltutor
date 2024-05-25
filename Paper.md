@@ -1,7 +1,3 @@
-<meta name="date" content="2024-03-02" />
-
-<title>Paper.Rmd</title>
-
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
 document.addEventListener('DOMContentLoaded', function(e) {
@@ -154,19 +150,9 @@ display: none;
 
 <div class="container-fluid main-container">
 
+# Paper.Rmd
 
-
-
-<div id="header">
-
-
-
-<h1 class="title toc-ignore">Paper.Rmd</h1>
-<h4 class="date">2024-03-02</h4>
-
-</div>
-
-<div id="TOC">
+#### 2024-03-02
 
 - [Про цей файл](#about-this-file)
   - [підключити бібліотеки](#include-libraries)
