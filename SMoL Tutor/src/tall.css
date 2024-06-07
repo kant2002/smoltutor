@@ -1,0 +1,15 @@
+/* Make buttons taller */
+#dialog+div {
+    padding-bottom: 1em;
+}
+#dialog+div button:only-child {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/* Use another way to highly focused input */
+label:hover {
+    background-color: white;
+    filter: invert(100%);
+}
+

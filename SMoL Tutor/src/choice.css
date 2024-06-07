@@ -1,0 +1,52 @@
+/* Bold multiple-choice */
+ol > li::marker {
+    font-weight: bold;
+  }
+  
+  /* Smooth scrolling */
+  * {
+    scroll-behavior: smooth
+  }
+  
+  /* Coloring of Messages */
+  
+  .MessageContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Overall Layout of Messages */
+  
+  .MessageContainer {
+    overflow-y: scroll;
+  }
+  
+  /* Overall Layout of InputBox */
+  
+  .InputBox {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  .InputBox>input {
+    flex-grow: 1;
+  }
+  
+  /* Overall Layout of App */
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: calc(min(100vw, 80ex));
+  }
+  
+  .MessageContainer {
+    flex-grow: 1;
+  }
+  
+  .InputBox {
+    flex-grow: 0;
+  }

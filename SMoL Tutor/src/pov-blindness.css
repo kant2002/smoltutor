@@ -1,0 +1,84 @@
+:root {
+    /* This color scheme is from *Points of View: Color blindness* */
+    --color-Black: rgb(0, 0, 0);
+    --color-Orange: rgb(230, 159, 0);
+    --color-Sky-blue: rgb(86, 180, 233);
+    --color-Bluish-green: rgb(0, 158, 115);
+    --color-Yellow: rgb(240, 228, 66);
+    --color-Blue: rgb(0, 114, 178);
+    --color-Vermillion: rgb(213, 94, 0);
+    --color-Reddish-purple: rgb(204, 121, 167);
+    --color-White: white;
+
+    --color-1: rgb(0, 0, 0);
+    --color-2: rgb(230, 159, 0);
+    --color-3: rgb(86, 180, 233);
+    --color-4: rgb(0, 158, 115);
+    --color-5: rgb(240, 228, 66);
+    --color-6: rgb(0, 114, 178);
+    --color-7: rgb(213, 94, 0);
+    --color-8: rgb(204, 121, 167);
+    --color-9: white;
+
+}
+
+/* Coloring of dialog */
+
+#dialog {
+    background-color: var(--color-Reddish-purple);
+}
+
+.smol-icon {
+    border-color: var(--color-1);
+    background-color: var(--color-White);
+    color: var(--color-1);
+}
+
+label:hover {
+    /* color: var(--color-White); */
+    background-color: var(--color-Sky-blue);
+}
+
+
+.Message.sys {
+    background-color: var(--color-White);
+}
+
+.Message.usr {
+    background-color: rgb(244, 244, 244);
+}
+
+.Message.warning {
+    color: var(--color-White);
+    background-color: var(--color-Vermillion);
+}
+
+.Message.encouraging {
+    color: var(--color-White);
+    background-color: var(--color-Blue);
+}
+
+.Message.emphasizing {
+    /* border: thick double var(--color-Sky-blue); */
+    border-width: 1ex;
+    border-color: var(--color-Sky-blue);
+}
+
+@keyframes blinker {
+    50% {
+        background-color: var(--color-Yellow);
+    }
+}
+
+.Message.sys.selected {
+    background-color: var(--color-Yellow);
+}
+
+/* hightlight linked elements */
+.Message:target {
+    animation: target-fade 3s 1;
+  }
+  @keyframes target-fade {
+    0% { background-color: var(--color-Yellow); }
+    100% { background-color: white; }
+  }

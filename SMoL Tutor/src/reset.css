@@ -1,0 +1,121 @@
+/* My Reset */
+div {
+    /* sizing */
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    /* font */
+    font-size: 100%;
+    font-weight: normal;
+    /* decoration */
+    outline: 0;
+    background: transparent;
+}
+
+label,
+button,
+input,
+p {
+    margin: 0;
+    font-size: 100%;
+}
+
+p+p {
+    margin-top: 2ex;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.8ex 1.2ex;
+}
+
+/* rounded corner */
+button,
+label,
+input {
+    border-radius: .5ex .5ex;
+}
+
+/* margin */
+button,
+label,
+input {
+    margin: .2ex;
+}
+
+button {
+    display: inline-flex;
+}
+
+label {
+    display: block;
+    transition: all .4s ease-in-out;
+}
+
+input[type="text"] {
+    outline: 0;
+    border: 0;
+    border-bottom: 0.5ex solid grey;
+    border-radius: 0;
+    flex-grow: 1;
+}
+
+input[type="text"]:focus {
+    border-color: dodgerblue;
+}
+
+
+blockquote {
+    border-left: 0.5ex solid grey;
+    margin-left: 0;
+    padding-left: 1ex;
+}
+
+blockquote:hover {
+    filter: contrast(200%);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+pre,
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    background-color: rgba(200, 200, 200, 0.3);
+    display: inline-block;
+    white-space: pre;
+}
+
+pre {
+    display: block;
+}
+
+code {
+    box-shadow: 0 0 0 .1ex rgba(200, 200, 200, 0.3);
+}
+
+pre {
+    padding: .5ex 1ex;
+}
+
+pre>code {
+    border: unset;
+    background-color: unset;
+    box-shadow: unset;
+}
+
+span p {
+    display: inline;
+}
+
+*>p:only-of-type {
+    display: inline;
+}
